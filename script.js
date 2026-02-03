@@ -1,6 +1,10 @@
 const container = document.querySelector('#container');
 const colorRadioBtns = document.querySelectorAll('input[name="colorMode"]');
 
+let hue = 0;
+let saturation = 100;
+let lightness = 50;
+
 
 function generateCanvas(resolution) {
 
@@ -42,11 +46,11 @@ function startSketch() {
     });
 };
 
+
+
 function sketchPxl(pixel) {
 
-    let hue;
-    let saturation = 100;
-    let lightness = 50;
+
     
     console.log(checkColorMode());
 
@@ -61,7 +65,7 @@ function sketchPxl(pixel) {
             hue = 240;
             break;
         case 'rainbow':
-            hue = Math.random() * 360;
+            hue = hue + 10;
             break;
     };
 
