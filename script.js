@@ -41,7 +41,14 @@ function startSketch() {
 };
 
 function sketchPxl(pixel) {
-    pixel.style["background-color"] = "blue";
+    const red = Math.random() * 255;
+    const green = Math.random() * 255;
+    const blue = Math.random() * 255;
+
+    let pixelColor = [red, green, blue];
+    console.log(pixelColor);
+
+    pixel.style["background-color"] = `rgb(${pixelColor[0]}, ${pixelColor[1]}, ${pixelColor[2]})`;
 };
 
 function clearCanvas() {
