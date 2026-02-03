@@ -1,4 +1,6 @@
 const container = document.querySelector('#container');
+const colorRadioBtns = document.querySelectorAll('input[name="colorMode"]');
+
 
 function generateCanvas(resolution) {
 
@@ -41,14 +43,32 @@ function startSketch() {
 };
 
 function sketchPxl(pixel) {
-    const red = Math.random() * 255;
-    const green = Math.random() * 255;
-    const blue = Math.random() * 255;
 
-    let pixelColor = [red, green, blue];
-    console.log(pixelColor);
+    let hue;
+    let saturation = 100;
+    let lightness = 50;
+    
+    console.log(checkColorMode());
 
-    pixel.style["background-color"] = `rgb(${pixelColor[0]}, ${pixelColor[1]}, ${pixelColor[2]})`;
+    switch (checkColorMode()) {
+        case 'red':
+            hue = 0;
+            break;
+        case 'green':
+            hue = 130;
+            break;
+        case 'blue':
+            hue = 240;
+            break;
+        case 'rainbow':
+            hue = Math.random() * 360;
+            break;
+    };
+
+    console.log(`hsl(${hue}, ${saturation}%, ${lightness}%)`);
+
+    pixel.style["background-color"] = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
 };
 
 function clearCanvas() {
@@ -82,4 +102,15 @@ function clearScreen() {
     pixels.forEach((pixel) => {
         container.removeChild(pixel);
     })
+};
+
+function checkColorMode() {
+    let selectedColorMode;
+    colorRadioBtns.forEach((radio) => {
+        if (radio.checked) {
+            selectedColorMode = radio.value;
+        };
+    });
+
+    return selectedColorMode;
 };
