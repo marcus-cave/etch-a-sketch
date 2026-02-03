@@ -27,14 +27,20 @@ generateCanvas();
 const pixels = document.querySelectorAll('#container div');
 
 pixels.forEach((pixel) => {
-    pixel.addEventListener('mouseover', () => {
-        sketchPxl(pixel);
-    });
+    pixel.addEventListener('mouseover', () => sketchPxl(pixel));
     
 });
 
 function sketchPxl(pixel) {
     pixel.style["background-color"] = "blue";
-    console.log(pixel);
-
 };
+
+function clearCanvas() {
+    pixels.forEach((pixel) => {
+        pixel.style["background-color"] = "pink";
+    });
+}
+
+const clearBtn = document.querySelector('#clearCanvas');
+
+clearBtn.addEventListener('click', clearCanvas);
