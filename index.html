@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,47 @@
     <script src="script.js" defer></script>
     <title>Etch-a-Sketch</title>
 </head>
+
 <body>
-    <div id="controls">
-    <h1>Etch-a-Sketch</h1>
-    <button id="clearCanvas">CLEAR</button>
-    <button id="resolutionPromptRequest">CHANGE RESOLUTION</button>
-    <div>
-        <input type="radio" id="red" name="colorMode" value="red"/>
-        <label for="red">RED</label>
-        <input type="radio" id="green" name="colorMode" value="green"/>
-        <label for="green">GREEN</label>
-        <input type="radio" id="blue" name="colorMode" value="blue"/>
-        <label for="blue">BLUE</label>
-        <input type="radio" id="rainbow" name="colorMode" value="rainbow" checked/>
-        <label for="rainbow">RAINBOW</label>
-    </div>
-    </div>
+    <div class="toy">
+        <div class="title">
+            <h2>MAGIC</h2>
+            <h1>Etch-a-Sketch</h1>
+            <h2>SCREEN</h2>
+        </div>
+        <div class="canvas">
+            <div id="container"></div>
+        </div>
+
+        <div id="controls">
+            <div class="dial"></div>
+            <div class="options">
+
+                <button id="clearCanvas">CLEAR</button>
+                <button id="resolutionPromptRequest">RESOLUTION</button>
 
 
-    <div id="container"></div>
+                <div class="colorSelector">
+                    <div>
+                        <p>COLOUR:</p>
+                    </div>
+                    <div>
+                        <select name="colorMode" id="colorMode">
+                            <option value="black">BLACK</option>
+                            <option value="red">RED</option>
+                            <option value="green">GREEN</option>
+                            <option value="blue">BLUE</option>
+                            <option value="rainbow">RAINBOW</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="dial"></div>
+        </div>
+
+
+    </div>
+
 </body>
+
 </html>

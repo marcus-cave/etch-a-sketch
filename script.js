@@ -1,5 +1,5 @@
 const container = document.querySelector('#container');
-const colorRadioBtns = document.querySelectorAll('input[name="colorMode"]');
+const colorSelectBox = document.querySelector('#colorMode');
 
 let hue = 0;
 let saturation = 100;
@@ -50,26 +50,33 @@ function startSketch() {
 
 function sketchPxl(pixel) {
 
-
-    
-    console.log(checkColorMode());
-
     switch (checkColorMode()) {
+        case 'black':
+            hue = 0;
+            saturation = 0;
+            lightness = 0;
+            break;
         case 'red':
             hue = 0;
+            saturation = 100;
+            lightness = 50;
             break;
         case 'green':
             hue = 130;
+            saturation = 100;
+            lightness = 50;
             break;
         case 'blue':
             hue = 240;
+            saturation = 100;
+            lightness = 50;
             break;
         case 'rainbow':
             hue = hue + 10;
+            saturation = 100;
+            lightness = 50;
             break;
     };
-
-    console.log(`hsl(${hue}, ${saturation}%, ${lightness}%)`);
 
     pixel.style["background-color"] = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 
@@ -77,7 +84,7 @@ function sketchPxl(pixel) {
 
 function clearCanvas() {
     pixels.forEach((pixel) => {
-        pixel.style["background-color"] = "pink";
+        pixel.style["background-color"] = "white";
     });
 }
 
@@ -110,11 +117,9 @@ function clearScreen() {
 
 function checkColorMode() {
     let selectedColorMode;
-    colorRadioBtns.forEach((radio) => {
-        if (radio.checked) {
-            selectedColorMode = radio.value;
-        };
-    });
 
+    selectedColorMode = colorSelectBox.value;
+
+    console.log(selectedColorMode);
     return selectedColorMode;
 };

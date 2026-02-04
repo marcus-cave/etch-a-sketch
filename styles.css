@@ -1,10 +1,118 @@
 #container {
     display: flex;
     flex-wrap: wrap;
-    background-color: lightsteelblue;
+    background-color: rgb(255, 255, 255);
+    border: solid black;
+
 }
 
 .pixel {
-    background-color: pink;
+    background-color: rgb(255, 255, 255);
 }
 
+.toy {
+    background-color: #b52a2a;
+    border: solid black;
+    border-radius: 25px;
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.canvas {
+    display: flex;
+    justify-content: center;
+}
+
+
+.title {
+    display: flex;
+    color: gold;
+    justify-content: center;
+}
+
+h1 {
+    font-family: cursive;
+    font-size: 48px;
+    margin: 20px 40px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    align-self: center;
+    opacity: 80%;
+}
+
+#controls {
+    margin: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dial {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: dotted #b52a2a;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.colorSelector {
+    display: flex;
+    color: #b52a2a;
+    background-color: gold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    
+    margin: 10px;
+    padding: 0px 20px;
+
+    border: none;
+    border-radius: 15px;
+
+    height: 60px;
+
+    align-self: center;
+    
+}
+
+.colorSelector div {
+    align-self: center;
+}
+
+select {
+    background-color: transparent;
+    color: #b52a2a;
+    font-weight: bold;
+    font-size: 18px;
+    border: double;
+    margin-left: 5px;    
+}
+
+button {
+    background-color: gold;
+    color: #b52a2a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 0px 20px;
+    border: none;
+    border-radius: 15px;
+
+    height: 60px;
+
+    align-self: center;
+}
+
+button:hover {
+    color: #e42424;
+}
