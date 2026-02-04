@@ -2,7 +2,7 @@
 
 Etch-a-Sketch interactive model created as part of [The Odin Project](www.theodinproject.com) foundation projects.
 
-## View the [Live Preview](https://mac-pac.github.io/etch-a-sketch/)
+## View the [Live Preview](https://marcus-cave.github.io/etch-a-sketch/)
 
 ### Styling
 
