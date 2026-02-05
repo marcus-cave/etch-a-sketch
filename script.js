@@ -5,11 +5,14 @@ let hue = 0;
 let saturation = 100;
 let lightness = 50;
 
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
+console.log(screenWidth);
 
 function generateCanvas(resolution) {
 
     const canvasResolution = resolution * resolution;
-    const canvasSize = 800;
+    const canvasSize = screenHeight * 0.7;
 
     container.style.width = canvasSize + 'px';
     container.style.height = canvasSize + 'px';

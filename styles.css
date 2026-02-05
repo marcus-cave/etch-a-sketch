@@ -1,24 +1,8 @@
-#container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(255, 255, 255);
-    border: solid black;
-
-}
-
-.pixel {
-    background-color: rgb(255, 255, 255);
-}
-
 .toy {
     background-color: #b52a2a;
     border: solid black;
     border-radius: 25px;
-    max-width: 1500px;
-    width: 80%;
-    min-width: 810px;
     display: flex;
-    margin-top: 50px;
     flex-direction: column;
 }
 
@@ -27,11 +11,18 @@ body {
     justify-content: center;
 }
 
-.canvas {
+#container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    border: solid black;
+    align-self: center;
+    margin: 0px 80px;
 }
 
+.pixel {
+    background-color: rgb(255, 255, 255);
+}
 
 .title {
     display: flex;
@@ -41,27 +32,25 @@ body {
 
 h1 {
     font-family: cursive;
-    font-size: 48px;
-    margin: 20px 40px;
+    margin: 10px 20px;
 }
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
     align-self: center;
     opacity: 80%;
 }
 
 #controls {
-    margin: 10px 60px;
+    margin: 10px 10px;
     display: flex;
     justify-content: space-between;
 }
 
 .dial {
     background-color: white;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: dotted #b52a2a;
 }
@@ -72,24 +61,24 @@ h2 {
     justify-content: space-evenly;
 }
 
-.colorSelector {
-    display: flex;
+.controls {
     color: #b52a2a;
     background-color: gold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
     font-weight: bold;
-    
+}
+
+.colorSelector {
+    display: flex;
+
     margin: 10px;
     padding: 0px 20px;
 
     border: none;
     border-radius: 15px;
 
-    height: 60px;
-
+    height: 50px;
     align-self: center;
-    
 }
 
 .colorSelector div {
@@ -106,17 +95,12 @@ select {
 }
 
 button {
-    background-color: gold;
-    color: #b52a2a;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
     margin: 10px;
     padding: 0px 20px;
     border: none;
     border-radius: 15px;
 
-    height: 60px;
+    height: 50px;
 
     align-self: center;
 }
@@ -128,7 +112,7 @@ button:hover {
 /*FOOTER*/
 
 .footer {
-    font-size: 18px;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -143,6 +127,10 @@ button:hover {
 }
 
 .github-logo {
-    width: 28px;
+    width: 24px;
     align-self: center;
+}
+
+.github-logo:hover {
+    opacity: 80%;
 }
